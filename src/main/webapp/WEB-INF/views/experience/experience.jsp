@@ -21,11 +21,9 @@
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary"><fmt:formatDate pattern = "yyyy-MM-dd" value = "${example.dateStart}" /> - <fmt:formatDate pattern = "yyyy-MM-dd" value = "${example.dateEnd}" /></span></div>
 
-                            <div><a href='<c:url value="/editExperience/${example.id}"/>'
+                            <div><a href='<c:url value="/exp/editExperience/${example.id}"/>'
                                    class="btn-right btn btn-primary" role="button">Edytuj</a>
                             </div>
-
-
 
                     </div>
 

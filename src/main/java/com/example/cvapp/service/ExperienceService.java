@@ -20,7 +20,16 @@ public class ExperienceService {
 
     public void addExperience(ExperienceModel experienceModel) {
         experienceRepository.save(experienceModel);
+    }public void editExperience(ExperienceModel editedExperienceModel) {
+        experienceRepository.save(editedExperienceModel);
     }
 
+    public ExperienceModel getExperienceModelById(Long id){
+        return experienceRepository.findById(id).orElse(null);
+    }
+
+    public void deleteExperience(Long id){
+        experienceRepository.deleteById(id);
+    }
 
 }

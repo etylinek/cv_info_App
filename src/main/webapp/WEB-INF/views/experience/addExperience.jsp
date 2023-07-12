@@ -6,7 +6,7 @@
 
 <form method="post" action='<c:url value="/exp/addExperience"/>'>
     <!-- Page Content-->
-    <div class="container-fluid p-0 col-xl-12 col-md-12 mb-12">
+    <div class="container-fluid">
         <!-- Experience-->
         <section class="resume-section" id="experience">
             <div class="resume-section-content">
@@ -15,7 +15,7 @@
                     <div class="form-group row">
                         <label class="col-2 col-form-label">Stanowisko</label>
                         <div class="col-10">
-                            <input class="form-control" type="text" name="position " placeholder="uzupełnij stanowisko">
+                            <input class="form-control" type="text" name="position" placeholder="uzupełnij stanowisko">
                         </div>
 
 
