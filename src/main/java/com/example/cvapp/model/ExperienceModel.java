@@ -1,6 +1,7 @@
 package com.example.cvapp.model;
 
 import lombok.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -16,15 +17,21 @@ public class ExperienceModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
+ //   @Column
     private String company;
-    @Column
-    private String workplace;
-    @Column
+
+  //  @Column
+    private String position;
+
+ //   @Column
     private String description;
-    @Column
-    private Date dateFrom;
-    @Column
-    private Date dateTo;
+
+ //   @Column
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date dateStart;
+
+ //   @Column
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date dateEnd;
 
 }

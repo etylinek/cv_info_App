@@ -1,50 +1,62 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<%@ page contentType="text/html; charset=UTF-8"%>
-<%@include file="../dynamic/header.jspf"%>
 
-<form method="post" action='<c:url value="/postExperience"/>'>
-        <!-- Page Content-->
-        <div class="container-fluid p-0">
-            <!-- Experience-->
-            <section class="resume-section" id="experience">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Experience</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Senior Web Developer</h3>
-                            <div class="subheading mb-3">Intelitec Solutions</div>
-                            <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@include file="../dynamic/header.jspf" %>
+
+<form method="post" action='<c:url value="/exp/addExperience"/>'>
+    <!-- Page Content-->
+    <div class="container-fluid p-0 col-xl-12 col-md-12 mb-12">
+        <!-- Experience-->
+        <section class="resume-section" id="experience">
+            <div class="resume-section-content">
+                <h2 class="mb-5">Add Experience</h2>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="form-group row">
+                        <label class="col-2 col-form-label">Stanowisko</label>
+                        <div class="col-10">
+                            <input class="form-control" type="text" name="position " placeholder="uzupełnij stanowisko">
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">March 2013 - Present</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Web Developer</h3>
-                            <div class="subheading mb-3">Intelitec Solutions</div>
-                            <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+
+
+                        <label class="col-2 col-form-label">Firma</label>
+                        <div class="col-10">
+                            <input class="form-control" type="text" name="company" placeholder="uzupełnij nazwe firmy">
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">December 2011 - March 2013</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Junior Web Designer</h3>
-                            <div class="subheading mb-3">Shout! Media Productions</div>
-                            <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
+
+
+
+                        <label class="col-2 col-form-label">Data rozpoczęcia pracy</label>
+                        <div class="col-10">
+                            <input class="form-control" type="date" name="dateStart" placeholder="">
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">July 2010 - December 2011</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Web Design Intern</h3>
-                            <div class="subheading mb-3">Shout! Media Productions</div>
-                            <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
+
+
+                        <label class="col-2 col-form-label">Data zakończenia pracy</label>
+                        <div class="col-10">
+                            <input class="form-control" type="date" name="dateEnd" placeholder="uzupełnij nazwe firmy">
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">September 2008 - June 2010</span></div>
-                    </div>
+
+
+
+
+                        <label class="col-2 col-form-label">Zakres obowiązków</label>
+                        <div class="col-10">
+                                    <textarea class="form-control" rows="5" name="description"
+                                              placeholder="opis stanowiska"></textarea>
+                        </div>
+
+
+                        <input class="btn btn-success pull-left" type="submit" value="Zapisz"/>
+
                 </div>
-            </section>
-        </div>
-<%@include file="../dynamic/footer.jspf"%>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</form>
+    <%@include file="../dynamic/footer.jspf" %>
     </body>
-</html>
+    </html>

@@ -6,16 +6,21 @@ import com.example.cvapp.repository.ExperienceRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class ExperienceService {
 
-    private ExperienceRepository experienceRepository;
+    private final ExperienceRepository experienceRepository;
 
-    public void addExperience(ExperienceModel experienceModel){
-        experienceRepository.save(experienceModel);
+    public List<ExperienceModel> getExperinceList() {
+        return experienceRepository.findAll();
     }
 
+    public void addExperience(ExperienceModel experienceModel) {
+        experienceRepository.save(experienceModel);
+    }
 
 
 }
