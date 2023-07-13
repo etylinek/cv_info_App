@@ -28,13 +28,13 @@
 
                         <label class="col-2 col-form-label">Data rozpoczęcia pracy</label>
                         <div class="col-10">
-                            <input class="form-control" type="date" name="dateStart" placeholder="">
+                            <input class="form-control" type="date" name="dateStart" >
                         </div>
 
 
                         <label class="col-2 col-form-label">Data zakończenia pracy</label>
                         <div class="col-10">
-                            <input class="form-control" type="date" name="dateEnd" placeholder="uzupełnij nazwe firmy">
+                            <input class="form-control" type="date" name="dateEnd" >
                         </div>
 
 

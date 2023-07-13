@@ -17,20 +17,20 @@ public class ExperienceModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
- //   @Column
+    @Column(name = "company")
     private String company;
 
-  //  @Column
+    @Column(name = "position")
     private String position;
 
- //   @Column
+    @Column(name = "description")
     private String description;
 
- //   @Column
+   @Column(name = "date_start")
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date dateStart;
 
- //   @Column
+    @Column(name = "date_end")
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date dateEnd;
 
